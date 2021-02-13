@@ -47,7 +47,7 @@ const render = function () {
 
 todoControl.addEventListener('submit', function (event) {
     event.preventDefault();
-    if (headerInput.value.length === 0) {
+    if (headerInput.value.length === 0 || (/^\s*$/).test(headerInput.value)) {
         headerButton.disabled;
     } else {
         const newTodo = {
